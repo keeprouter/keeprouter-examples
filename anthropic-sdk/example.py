@@ -1,4 +1,7 @@
-"""Call Claude (and more) through KeepRouter with the Anthropic SDK.
+"""Call a Claude model through KeepRouter with the Anthropic SDK.
+
+    This is a paid-model example: scope the key to the selected model and
+    check balance and the current price before running it.
 
     pip install anthropic
     export KEEPROUTER_KEY=sk-kr-your-key

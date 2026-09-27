@@ -1,4 +1,5 @@
-// Call Claude (and more) through KeepRouter with the Anthropic SDK.
+// Call a Claude model through KeepRouter with the Anthropic SDK.
+// Paid example: scope the key to this model and check balance and price first.
 //
 //   npm i @anthropic-ai/sdk
 //   KEEPROUTER_KEY=sk-kr-your-key node example.mjs

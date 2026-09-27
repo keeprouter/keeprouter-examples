@@ -1,6 +1,5 @@
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "https://keeprouter.com",
-    "ANTHROPIC_AUTH_TOKEN": "sk-kr-your-key"
+    "ANTHROPIC_BASE_URL": "https://keeprouter.com"
   }
 }

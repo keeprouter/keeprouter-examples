@@ -7,6 +7,6 @@ curl https://keeprouter.com/v1/chat/completions \
   -H "Authorization: Bearer $KEEPROUTER_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "claude-opus-4-8",
+    "model": "free",
     "messages": [{"role": "user", "content": "Hello"}]
   }'

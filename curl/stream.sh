@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Streaming chat completion (server-sent events). Set KEEPROUTER_KEY first.
+# Paid example: scope the key to this model and check balance and price first.
 #   export KEEPROUTER_KEY=sk-kr-your-key
 set -euo pipefail
 

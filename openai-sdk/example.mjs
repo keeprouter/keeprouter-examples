@@ -1,4 +1,4 @@
-// Call any model through KeepRouter with the OpenAI SDK.
+// Call a chat-compatible model through KeepRouter with the OpenAI SDK.
 //
 //   npm i openai
 //   KEEPROUTER_KEY=sk-kr-your-key node example.mjs
@@ -9,10 +9,10 @@ const client = new OpenAI({
   apiKey: process.env.KEEPROUTER_KEY,
 });
 
-// Swap the model id for any model in the catalog (https://keeprouter.com/models):
-// claude-opus-4-8, gpt-4o, gemini-3.5-flash, deepseek-v3.2, glm-4.6, free, …
+// Start with a key scoped to free. For paid models, check the live catalog,
+// enabled chat route, key scope, and balance before changing this exact ID.
 const resp = await client.chat.completions.create({
-  model: "gemini-3.5-flash",
+  model: "free",
   messages: [{ role: "user", content: "In one sentence, what is an LLM API gateway?" }],
 });
 console.log(resp.choices[0].message.content);
