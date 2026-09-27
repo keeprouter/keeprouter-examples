@@ -1,4 +1,4 @@
-"""Call any model through KeepRouter with the OpenAI SDK.
+"""Call a chat-compatible model through KeepRouter with the OpenAI SDK.
 
     pip install openai
     export KEEPROUTER_KEY=sk-kr-your-key
@@ -13,14 +13,14 @@ client = OpenAI(
     api_key=os.environ["KEEPROUTER_KEY"],
 )
 
-# Swap the model id for any model in the catalog (https://keeprouter.com/models):
-# claude-opus-4-8, gpt-4o, gemini-3.5-flash, deepseek-v3.2, glm-4.6, free, …
+# Start with a key scoped to free. For paid models, check the live catalog,
+# enabled chat route, key scope, and balance before changing this exact ID.
 resp = client.chat.completions.create(
-    model="claude-opus-4-8",
+    model="free",
     messages=[{"role": "user", "content": "In one sentence, what is an LLM API gateway?"}],
 )
 print(resp.choices[0].message.content)
 
 # Streaming works the same way:
-# for chunk in client.chat.completions.create(model="glm-4.6", messages=[...], stream=True):
+# for chunk in client.chat.completions.create(model="free", messages=[...], stream=True):
 #     print(chunk.choices[0].delta.content or "", end="")

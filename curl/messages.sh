@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Anthropic-compatible Messages API (the endpoint Claude Code + the Anthropic SDK use).
+# Paid example: scope the key to this model and check balance and price first.
 #   export KEEPROUTER_KEY=sk-kr-your-key
 set -euo pipefail
 

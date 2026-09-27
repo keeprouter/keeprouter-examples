@@ -1,0 +1,51 @@
+name: Example request or reproducible problem
+description: Request a missing client example or report a problem with an existing one.
+title: "[example] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is public. Do not include API keys, private prompts, customer data, or complete request logs. You can check a credential-free configuration locally with the [migration checker](https://keeprouter.com/tools/api-migration-checker).
+  - type: dropdown
+    id: client
+    attributes:
+      label: Client
+      options:
+        - OpenAI SDK (Python)
+        - OpenAI SDK (Node)
+        - Anthropic SDK (Python)
+        - Anthropic SDK (Node)
+        - Claude Code
+        - curl
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: route
+    attributes:
+      label: API operation and exact model ID
+      description: "Example: Chat Completions with free. Check the current model catalog first."
+      placeholder: /v1/chat/completions with free
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What are you trying to do?
+      description: Include the client version and expected result.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Minimal sanitized reproduction or observed result
+      description: Include only public configuration and a redacted error or response shape. Do not paste secrets.
+    validations:
+      required: true
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Public data check
+      options:
+        - label: I removed API keys, private prompts, customer data, and unredacted logs.
+          required: true
